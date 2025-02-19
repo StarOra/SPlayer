@@ -169,7 +169,7 @@ class Player {
       const keyWord = songData.name + "-" + artist;
       if (!songId || !keyWord) return null;
       // 尝试解锁
-      window.$message..warning("试图开始解锁");
+      console.log("试图开始解锁");
       const [neteaseUrl, kuwoUrl] = await Promise.all([
         unlockSongUrl(songId, keyWord, "netease"),
         unlockSongUrl(songId, keyWord, "kuwo"),

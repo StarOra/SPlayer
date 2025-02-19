@@ -9,7 +9,7 @@
         <SvgIcon v-else :size="22" name="Music" />
         <!-- 播放暂停 -->
         <SvgIcon
-          :size="28"
+          :size="128"
           :name="statusStore.playStatus ? 'Pause' : 'Play'"
           class="status"
           @click="player.playOrPause()"

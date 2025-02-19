@@ -545,6 +545,7 @@ class Player {
         }
         // 尝试解灰
         else if (isElectron && type !== "radio" && settingStore.useSongUnlock) {
+          console.log("开始尝试解灰");
           const unlockUrl = await this.getUnlockSongUrl(playSongData);
           if (unlockUrl) {
             statusStore.playUblock = true;

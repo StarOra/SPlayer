@@ -162,6 +162,7 @@ class Player {
    * @returns
    */
   private async getUnlockSongUrl(songData: SongType): Promise<string | null> {
+    window.$message..warning("试图开始解锁");
     try {
       const songId = songData.id;
       const artist = Array.isArray(songData.artists) ? songData.artists[0].name : songData.artists;

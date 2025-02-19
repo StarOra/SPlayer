@@ -162,13 +162,14 @@ class Player {
    * @returns
    */
   private async getUnlockSongUrl(songData: SongType): Promise<string | null> {
-    window.$message..warning("试图开始解锁");
+    
     try {
       const songId = songData.id;
       const artist = Array.isArray(songData.artists) ? songData.artists[0].name : songData.artists;
       const keyWord = songData.name + "-" + artist;
       if (!songId || !keyWord) return null;
       // 尝试解锁
+      window.$message..warning("试图开始解锁");
       const [neteaseUrl, kuwoUrl] = await Promise.all([
         unlockSongUrl(songId, keyWord, "netease"),
         unlockSongUrl(songId, keyWord, "kuwo"),
